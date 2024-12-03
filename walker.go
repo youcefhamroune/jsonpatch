@@ -26,9 +26,12 @@ type walker struct {
 // the value of them with each other
 func (w *walker) walk(modified, current reflect.Value, pointer JSONPointer) error {
 	// the data structures of both JSON objects must be identical
+	fmt.Println("modified.Kind()",modified.Kind())
+	fmt.Println("current.Kind()",current.Kind())
 	if modified.Kind() != current.Kind() {
 		return fmt.Errorf("kind does not match at: %s modified: %s current: %s", pointer, modified.Kind(), current.Kind())
 	}
+
 	switch modified.Kind() {
 	case reflect.Struct:
 		return w.processStruct(modified, current, pointer)
