@@ -1,4 +1,4 @@
-module github.com/snorwin/jsonpatch
+module github.com/youcefhamroune/jsonpatch
 
 go 1.22
 
@@ -7,6 +7,7 @@ require (
 	github.com/go-faker/faker/v4 v4.5.0
 	github.com/onsi/ginkgo/v2 v2.20.2
 	github.com/onsi/gomega v1.34.2
+
 )
 
 require (
@@ -15,6 +16,7 @@ require (
 	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/google/pprof v0.0.0-20240827171923-fa2c70bbbfe5 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
+	go.mongodb.org/mongo-driver v1.17.1 // indirect
 	golang.org/x/net v0.28.0 // indirect
 	golang.org/x/sys v0.24.0 // indirect
 	golang.org/x/text v0.17.0 // indirect

@@ -4,7 +4,7 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	"github.com/snorwin/jsonpatch"
+	"github.com/youcefhamroune/jsonpatch"
 )
 
 var _ = Describe("JSONPointer", func() {

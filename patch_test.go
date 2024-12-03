@@ -12,7 +12,7 @@ import (
 	jsonpatch2 "github.com/evanphx/json-patch/v5"
 	"github.com/go-faker/faker/v4"
 
-	"github.com/snorwin/jsonpatch"
+	"github.com/youcefhamroune/jsonpatch"
 )
 
 type A struct {
