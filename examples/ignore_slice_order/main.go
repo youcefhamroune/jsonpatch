@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/snorwin/jsonpatch"
+	"github.com/youcefhamroune/jsonpatch"
 )
 
 type Person struct {
