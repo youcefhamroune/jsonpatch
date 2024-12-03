@@ -277,6 +277,13 @@ func (w *walker) processStruct(modified, current reflect.Value, pointer JSONPoin
 		return w.processString(m, c, pointer)
 	}
 
+	//process ObjectId
+	if modified.Type() == reflect.TypeOf(primitive.ObjectID{}) {
+		modifiedID := modified.Interface().(primitive.ObjectID).Hex()
+		currentID := current.Interface().(primitive.ObjectID).Hex()
+		return w.processString(reflect.ValueOf(modifiedID), reflect.ValueOf(currentID), pointer)
+	}
+
 	// process all struct fields, the order of the fields of the  modified and current JSON object is identical because their types match
 	for j := 0; j < modified.NumField(); j++ {
 		tag := strings.Split(modified.Type().Field(j).Tag.Get(jsonTag), ",")[0]
